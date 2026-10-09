@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Authify</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'accounts/style.css' %}">
+</head>
+<body>
+    <main class="auth-container">
+        <section class="auth-card">
+            <div class="brand">
+                <div class="brand-icon">A</div>
+                <span>Authify</span>
+            </div>
+
+            <div class="heading">
+                <h1>Your Dashboard</h1>
+                <p>Welcome! You are successfully logged in.</p>
+            </div>
+
+            <div id="loading">Loading your profile...</div>
+
+            <div id="profile" hidden>
+                <div class="form-group">
+                    <label>Username</label>
+                    <p id="profileUsername"></p>
+                </div>
+
+                <div class="form-group">
+                    <label>Email address</label>
+                    <p id="profileEmail"></p>
+                </div>
+            </div>
+
+            <div id="message" class="message" role="status"
+                 aria-live="polite"></div>
+
+            <button type="button" id="logoutButton">Log Out</button>
+        </section>
+
+        <p class="copyright">Secure access. Simple experience.</p>
+    </main>
+
+    <script src="{% static 'accounts/app.js' %}"></script>
+</body>
+</html>
